@@ -5,7 +5,7 @@ void update(ll i, ll x,vector<ll>&bit,ll N){            //binaryINDEXEDtree  (bi
 }
 
 ll sum(ll i,vector<ll>&bit){
-    ll ans = 0;
+    ll ans = 0;                               //inversion count by compression 
     for(; i > 0; i -= (i&-i))
         ans += bit[i];
     return ans;
